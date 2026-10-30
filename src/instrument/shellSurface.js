@@ -32,6 +32,13 @@ export function createShellSurface({ radius, height, a, b, direction = 1 }) {
     return rs[lo] + (rs[hi] - rs[lo]) * t;
   }
 
+  /** Arc length from the pole at a given horizontal radius. */
+  function arcAt(r) {
+    const x = (Math.min(Math.max(r, 0), radius) / radius) * TABLE_SIZE;
+    const i = Math.min(Math.floor(x), TABLE_SIZE - 1);
+    return ss[i] + (ss[i + 1] - ss[i]) * (x - i);
+  }
+
   function point(s, angle) {
     const r = radiusAt(s);
     return { x: r * Math.cos(angle), y: profile(r), z: r * Math.sin(angle) };
@@ -50,7 +57,7 @@ export function createShellSurface({ radius, height, a, b, direction = 1 }) {
     return { point: p, radial, tangent, normal };
   }
 
-  return { radius, height, direction, arcLength, profile, radiusAt, point, frame };
+  return { radius, height, direction, arcLength, profile, radiusAt, arcAt, point, frame };
 }
 
 export function fieldFrame(surface, field) {

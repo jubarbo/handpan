@@ -12,7 +12,7 @@ export const SHELL = Object.freeze({
   radius: 0.28,
   top: { radius: 0.28, height: 0.118, a: 2.1, b: 0.8, direction: 1 },
   bottom: { radius: 0.28, height: 0.112, a: 2.0, b: 0.85, direction: -1 },
-  rim: { innerRadius: 0.271, outerRadius: 0.2865, thickness: 0.011 },
+  rim: { innerRadius: 0.2745, outerRadius: 0.2865, thickness: 0.0105 },
   gu: { radius: 0.052, neckDepth: 0.018 },
 });
 

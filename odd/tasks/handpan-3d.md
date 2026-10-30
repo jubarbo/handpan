@@ -16,13 +16,13 @@ Branch: `feat/handpan-3d` · Delivery: ask-on-risk · Test runner: Vitest (`npm 
 
 | ID | Specs | Route | Status | Evidence |
 |----|-------|-------|--------|----------|
-| T1 | S1 | inline | done | scaffold commit |
-| T2 | S3, S4 | inline | pending | layout + scale (unit tests) |
-| T3 | S2, S3 | inline | pending | procedural geometry |
-| T4 | S2 | inline | pending | PBR material + environment |
-| T5 | S4 | inline | pending | synthesis engine |
-| T6 | S5 | inline | pending | interaction |
-| T7 | S6 | inline | pending | polish + mobile |
+| T1 | S1 | inline | done | 62107b0 |
+| T2 | S3, S4 | inline | done | 21c6326 · RED→GREEN scale/layout tests |
+| T3 | S2, S3 | inline | done | 03284ac · heightField tests + screenshots |
+| T4 | S2 | inline | done | e85ce35 · screenshots v1–v4 |
+| T5 | S4 | inline | done | 946fbc4 · voice spec tests |
+| T6 | S5 | inline | done | 65c403c · hit tests, e2e 18/18 mouse |
+| T7 | S6 | inline | done | e2e 18/18 touch (iPhone 13 emulation), build ok |
 
 Route evidence: no Writer trigger (units are sequential and share the layout module), so the parent works inline.
 
@@ -31,3 +31,5 @@ Route evidence: no Writer trigger (units are sequential and share the layout mod
 - L1 (2026-10-30, user): "Empecemos un proyecto de 0. Te adjunto una guía para generar un modelo 3D de un handpan, vamos a trabajar con js. El modelo debe ser realista y basado en la guía visual. Además debe tener interacción sonara con touch en celular y mouse en desktop. Necesito que generes un plan para realizarlo, pregunta lo que sea necesario."
 - L2 (2026-10-30, user): "respecto a las observaciones sobre la guia adjunto otra foto con vista del handpan desde arriba para conciliar esto, debe ser sumamente realista, respecto al sonido elejimos sintesis"
 - L3 (2026-10-30, user): "me parece correcto" (accepted D Kurd extended and the plan) → "si" (start implementation).
+- L4 (2026-10-30): visual iterations v1→v4 against the photo: hammer marks toned down, roughness lowered for crisp reflections, softer field borders and dimple walls, rounded darker rim.
+- L5 (2026-10-30, user): "puedes continuar?" → continued T6–T7. Pending: listening test on a real phone/desktop (synthesis not verifiable headless), RDD slice under budget.
